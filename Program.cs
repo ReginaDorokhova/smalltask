@@ -2,17 +2,18 @@
 
 class SmallTask
 {
+    static int MaxSymbolsInTheString = 3;
    static void fillArrayFromCmd(string[] array, int size){
         for (int i = 0; i < size; i++) {
-            Console.Write($"Array [{i}] = ");
-            array[i] = Console.ReadLine();
+             Console.Write($"Array [{i}] = ");
+             array[i] = Console.ReadLine() ?? string.Empty;
             }
     }
 
     static int fillResulArray(string[] initialArray, string[] resultArray) {
         int index = 0;
         for (int i = 0; i < initialArray.Length; i++) {
-            if (initialArray[i].Length < 4) {
+            if (initialArray[i].Length < MaxSymbolsInTheString + 1) {
                 resultArray[index] = initialArray[i];
                 index++;
             }
