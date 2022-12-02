@@ -6,15 +6,13 @@ class SmallTask
         for (int i = 0; i < size; i++) {
             Console.Write($"Array [{i}] = ");
             array[i] = Console.ReadLine();
-}
+            }
     }
 
     static int fillResulArray(string[] initialArray, string[] resultArray) {
         int index = 0;
-        for (int i = 0; i < initialArray.Length; i++)
-        {
-            if (initialArray[i].Length < 4)
-            {
+        for (int i = 0; i < initialArray.Length; i++) {
+            if (initialArray[i].Length < 4) {
                 resultArray[index] = initialArray[i];
                 index++;
             }
@@ -37,8 +35,7 @@ class SmallTask
     {
         int count = 0;
         Console.Write("Enter the array size: ");
-        string CountString;
-        CountString = Console.ReadLine();
+        string? CountString = Console.ReadLine();
         if (Int32.TryParse(CountString, out count) && count > 0) {
              string[] InitialArray = new string[count];
              string[] ResultArray = new string[count];
