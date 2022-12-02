@@ -2,7 +2,7 @@
 
 class SmallTask
 {
-    static int MaxSymbolsInTheString = 3;
+   static int MaxSymbolsInTheString = 3;
    static void fillArrayFromCmd(string[] array, int size){
         for (int i = 0; i < size; i++) {
              Console.Write($"Array [{i}] = ");
